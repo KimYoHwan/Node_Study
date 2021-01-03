@@ -8,7 +8,7 @@ mongoose.connect("mongodb://localhost:27017/youtube-clone",{
 
 const db = mongoose.connection;
 const handleOpen  = ()=> console.log("✅ Connect to DataBase Mongo");
-const handleError = ()=> console.log(` Error on DB Connection ${error}`);
+const handleError = ()=> console.log(`❌ Error on DB Connection ${error}`);
 
 db.once("open",handleOpen);
 
