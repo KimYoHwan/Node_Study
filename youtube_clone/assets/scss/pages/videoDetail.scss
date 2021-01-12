@@ -12,6 +12,11 @@
         width: 100%;
         max-width: 850px;
         margin-top:25px;
+        .video__author{
+            a{
+                color:#3498db;
+            }
+        }
         button{
             width:100px;
             margin-bottom: 25px;
