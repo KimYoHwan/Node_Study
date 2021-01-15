@@ -78,7 +78,7 @@ const routers = {
   facebookCallback: FB_CALLBACK,
   api:API,
   registerView:REGISTER_VIEW,
-  addComment:ADD_COMMENT,
+  addComment: ADD_COMMENT,
 
 };
 export default routers;

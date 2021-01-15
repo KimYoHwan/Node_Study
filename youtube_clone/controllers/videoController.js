@@ -50,7 +50,6 @@ export const videoDetail = async (req, res) => {
   } = req;
   try {
     const video = await Video.findById(id).populate("creator").populate("comments");;
-    console.log(video);
     res.render("videoDetail", { pageTitle: video.title, video });
   } catch (error) {
     res.redirect(routes.home);
@@ -123,9 +122,9 @@ export const postregisterView = async(req,res)=>{
 export const postADDComment = async(req,res) =>{
   const {
     params: {id},
-    body:{comment}
+    body:{comment},
+    user
   } = req;
-
   try{
     const video = await Video.findById(id);
     const newComment = await Comment.create({
